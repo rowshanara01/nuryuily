@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* color variables */
+:root {
+  --background-color: #010313;
+  --background-color-2: #181024;
+  --text-primary-color: #fff;
+  --text-secondary-color: #000;
+  --primary-color: #3ca2fa;
+  --primary-color-1: #3ca2fa66;
+  --primary-color-2: #3ca2fa4d;
+  --primary-color-3: #3ca2fa33;
+  --primary-color-4: #3ca2fa1a;
+  --primary-color-5: #3ca2fa0d;
+  --secondary-color: #80eeb4;
+  --secondary-color-1: #80eeb4cc;
+  --secondary-color-2: #80eeb44d;
+  --secondary-color-3: #80eeb433;
+  --secondary-color-4: #80eeb41a;
+  --white-color: #fff;
+  --white-color-2: #ffffffcc;
+  --black-color: #000;
+  --black-color-2: #736f7f;
+  --black-color-3: #8d94a1;
+  --black-color-4: #d4d4d4;
+  --glass-color: #0d0e1e;
+  --glass-color-2: #1b1d2b;
+  --glass-color-3: #313240;
+  --glass-color-4: #3d3e4b;
+  --glass-color-5: #0d0e1e66;
+  --border-color: #393a3d;
+  --placeholder-color: #8f99b1;
+  --copy-right-color: #6a5f77;
+  --opacity-text-color: #959596;
+  --purple-color: #140e1e80;
+
+  --font-nunito: "Nunito";
+  --font-creepster: "Creepster";
+}
+
+.light {
+  --background-color: #f7f7f7;
+  --text-primary-color: #000;
+  --opacity-text-color: #646d7b;
+  --glass-color: rgb(255 255 255 / 0.5);
+  --glass-color-5: rgb(255 255 255 / 0.66);
+  --placeholder-color: #0d0e1e;
+}
+
+.navigation-active {
+  @apply py-1 px-4 capitalize rounded-full;
+}
+
+.navigation-unactive {
+  @apply py-1 px-4 capitalize;
+}
+
+.social-icon-animation {
+  @apply bg-[var(--glass-color-5)] border-[var(--border-color)] p-3 rounded-full;
+}
+
+.custom-list-disc li::marker {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+.section-gap {
+  @apply space-y-12 lg:space-y-16 xl:space-y-20  2xl:space-y-24;
+}
+
+.font-nunito {
+  font-family: var(--font-nunito);
+}
+
+.clip-path-auth-layout {
+  clip-path: polygon(
+    50.279% 0.127%,
+    0.977% 0.127%,
+    0.977% 0.127%,
+    0.805% 0.161%,
+    0.653% 0.221%,
+    0.519% 0.303%,
+    0.404% 0.403%,
+    0.308% 0.516%,
+    0.23% 0.639%,
+    0.17% 0.768%,
+    0.127% 0.898%,
+    0.101% 1.024%,
+    0.093% 1.144%,
+    0.093% 95.553%,
+    0.093% 95.553%,
+    0.114% 95.901%,
+    0.174% 96.186%,
+    0.265% 96.415%,
+    0.382% 96.594%,
+    0.517% 96.728%,
+    0.666% 96.824%,
+    0.82% 96.889%,
+    0.974% 96.927%,
+    1.122% 96.946%,
+    1.256% 96.95%,
+    49.628% 96.95%,
+    49.628% 96.95%,
+    49.759% 96.952%,
+    49.882% 96.958%,
+    49.998% 96.966%,
+    50.105% 96.977%,
+    50.202% 96.99%,
+    50.289% 97.005%,
+    50.364% 97.022%,
+    50.427% 97.04%,
+    50.476% 97.059%,
+    50.512% 97.078%,
+    53.767% 99.365%,
+    53.767% 99.365%,
+    53.927% 99.464%,
+    54.07% 99.548%,
+    54.198% 99.618%,
+    54.312% 99.675%,
+    54.413% 99.72%,
+    54.501% 99.755%,
+    54.577% 99.781%,
+    54.643% 99.797%,
+    54.698% 99.807%,
+    54.744% 99.809%,
+    54.744% 99.809%,
+    59.47% 99.816%,
+    64.814% 99.824%,
+    70.52% 99.832%,
+    76.33% 99.841%,
+    81.985% 99.849%,
+    87.228% 99.857%,
+    91.802% 99.863%,
+    95.449% 99.868%,
+    97.911% 99.872%,
+    98.93% 99.873%,
+    98.93% 99.873%,
+    99.129% 99.85%,
+    99.304% 99.786%,
+    99.454% 99.688%,
+    99.582% 99.564%,
+    99.69% 99.42%,
+    99.777% 99.265%,
+    99.846% 99.104%,
+    99.897% 98.946%,
+    99.933% 98.797%,
+    99.953% 98.666%,
+    99.953% 4.574%,
+    99.953% 4.574%,
+    99.936% 4.293%,
+    99.886% 4.056%,
+    99.811% 3.861%,
+    99.715% 3.704%,
+    99.605% 3.582%,
+    99.485% 3.49%,
+    99.361% 3.426%,
+    99.239% 3.387%,
+    99.125% 3.368%,
+    99.023% 3.367%,
+    55.163% 3.367%,
+    55.163% 3.367%,
+    54.93% 3.36%,
+    54.733% 3.339%,
+    54.566% 3.307%,
+    54.426% 3.266%,
+    54.308% 3.216%,
+    54.208% 3.161%,
+    54.123% 3.103%,
+    54.047% 3.042%,
+    53.976% 2.981%,
+    53.907% 2.922%,
+    51.302% 0.508%,
+    51.302% 0.508%,
+    51.234% 0.451%,
+    51.167% 0.395%,
+    51.099% 0.342%,
+    51.031% 0.292%,
+    50.959% 0.246%,
+    50.884% 0.206%,
+    50.803% 0.173%,
+    50.714% 0.148%,
+    50.618% 0.133%,
+    50.512% 0.127%,
+    50.279% 0.127%
+  );
+}
+
+/* over write css */
+#nprogress .bar {
+  background: var(--primary-color) !important;
+  height: 4px;
+}
+
+.scroll-container {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  .step {
+    counter-increment: step;
+  }
+
+  .step:before {
+    @apply absolute inline-flex h-6 w-6 p-0.5 items-center justify-center rounded-full text-center -indent-px font-mono text-base font-medium;
+    @apply ml-[-45px];
+    background-color: var(--glass-color-3);
+    content: counter(step);
+  }
+
+  .light .step:before {
+    @apply absolute inline-flex h-6 w-6 p-0.5 items-center justify-center rounded-full text-center -indent-px font-mono text-base font-medium;
+    @apply ml-[-45px];
+    background-color: var(--white-color);
+    border: 1px solid black;
+    content: counter(step);
+  }
+}
+
+.simplebar-scrollbar:before {
+  background: #3ca2fa !important;
+  transition: background-color 0.3s;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 10px !important;
+}
+
+.cn-toast {
+  border: 1px solid var(--primary-color-2) !important;
+  background: var(--primary-color-4) !important;
+  color: var(--white-color) !important;
+  box-shadow: 0 10px 30px var(--primary-color-4) !important;
+  backdrop-filter: blur(8px);
+  border-radius: 8px !important;
+}
+
+.cn-toast-title {
+  color: var(--white-color) !important;
+  font-weight: bold !important;
+}
+
+.cn-toast-description {
+  color: var(--white-color-2) !important;
+}
+
+.cn-toast-action {
+  background: var(--primary-color-3) !important;
+  color: var(--white-color) !important;
+  border: 1px solid var(--primary-color-2) !important;
+}
+
+.cn-toast-cancel {
+  background: transparent !important;
+  color: var(--white-color) !important;
+  border: 1px solid var(--primary-color-2) !important;
+}
+
+.light .cn-toast {
+  border: 1px solid var(--primary-color) !important;
+  background: var(--white-color) !important;
+  color: var(--black-color) !important;
+  box-shadow: 0 10px 24px var(--primary-color-4) !important;
+}
+
+.light .cn-toast-title {
+  color: var(--black-color) !important;
+}
+
+.light .cn-toast-description {
+  color: var(--opacity-text-color) !important;
+}
+
+.light .cn-toast-action {
+  background: var(--primary-color) !important;
+  color: var(--white-color) !important;
+  border: 1px solid var(--primary-color) !important;
+}
+
+.light .cn-toast-cancel {
+  background: var(--white-color) !important;
+  color: var(--black-color) !important;
+  border: 1px solid var(--primary-color-2) !important;
+}
+
+/* mdx class */
+.mdx > .steps:first-child > h3:first-child {
+  @apply mt-0;
+}
+
+.steps > h3 {
+  @apply mt-8 mb-4 text-base font-semibold;
+}

@@ -1,0 +1,83 @@
+---
+title: "playing-card"
+description: "A stylish playing-card component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="playingCard" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Add the required CSS animations</Step>
+
+Add the following animations to your `globals.css` or others file.
+
+<CodeBlock isLanguage={false} snippetKey="playing-card-css" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/playing-card.tsx`
+
+<CodeBlock componentName="playingCard" fileName="playing-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| **Prop**                      | **Type**     | **Default**                         | **Description**                                                                  |
+| ----------------------------- | ------------ | ----------------------------------- | -------------------------------------------------------------------------------- |
+| `componentWidth`              | `string`     | `"400px"`                           | Max width of the playing card component.                                         |
+| `aspectRatio`                 | `string`     | `"9/16"`                            | Aspect ratio of the card (width/height format).                                  |
+| `outerRounding`               | `string`     | `"24px"`                            | Border radius for the card outline.                                              |
+| `innerRounding`               | `string`     | `"16px"`                            | Border radius for the card content.                                              |
+| `backgroundColor`             | `string`     | `"#FFF"`                            | Background color of the card content.                                            |
+| `foregroundColor`             | `string`     | `"#000"`                            | Color for main content like text.                                                |
+| `outlineColor`                | `string`     | `"#E879F9"`                         | Default border color.                                                            |
+| `hoverOutlineColor`           | `string`     | `"#6366F1"`                         | Border color on hover.                                                           |
+| `textArray`                   | `string[]`   | `Required`                          | Array of strings to display vertically (letter per line).                        |
+| `minWidth`                    | `number`     | `Required`                          | Minimum width of the component for responsive text sizing.                       |
+| `maxWidth`                    | `number`     | `Required`                          | Maximum width of the component for responsive text sizing.                       |
+| `minTextSize`                 | `number`     | `Required`                          | Minimum font size (px) of the vertical text.                                     |
+| `maxTextSize`                 | `number`     | `Required`                          | Maximum font size (px) of the vertical text.                                     |
+| `verticalPadding`             | `string`     | `"20px"`                            | Padding from top and bottom for text.                                            |
+| `horizontalPadding`           | `string`     | `"20px"`                            | Padding from left and right for text.                                            |
+| `manualLetterSpacing`         | `number`     | `undefined`                         | Custom letter spacing between vertical text elements.                            |
+| `componentId`                 | `string`     | `"card-1"`                          | Unique identifier for the component (used for internal layout calculations).     |
+| `onCardClicked`               | `() => void` | **Required**                        | Callback function triggered when the card is clicked.                            |
+| `revealCanvas`                | `boolean`    | `false`                             | If `true`, activates a shader-based animated background behind the card content. |
+| `textColorTransitionDelay`    | `string`     | `"1s"`                              | Delay before text color transition begins.                                       |
+| `textColorTransitionDuration` | `string`     | `"2s"`                              | Duration of the text color transition animation.                                 |
+| `revealCanvasBackgroundColor` | `string`     | `undefined`                         | Background color for the canvas reveal effect (used if `revealCanvas` is true).  |
+| `revealCanvasColors`          | `number[][]` | `[[236, 72, 153], [232, 121, 249]]` | Colors used in the animated shader reveal effect.                                |
+| `inscriptionColor`            | `string`     | `"#3662f4"`                         | Color of the vertically written text on the card.                                |
+| `inscriptionColorHovered`     | `string`     | `"#f12b30"`                         | Color of the vertically written text on hover.                                   |

@@ -1,0 +1,81 @@
+---
+title: "banner"
+description: "A stylish banner component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="banner" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/banner.tsx`
+
+<CodeBlock componentName="banner" fileName="banner" />
+
+`components/nurui/button.tsx`
+
+<CodeBlock componentName="banner" fileName="button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Examples
+
+<ComponentPreview
+  componentName="bannerCloseExample"
+  introName={false}
+  exampleName={"Close"}
+  v0ComponentName={"banner-close"}
+  previewComponentName={"banner-close"}
+/>
+
+### Props
+
+`Banner`
+
+| Prop            | Type                             | Default    | Description                                                                              |
+| --------------- | -------------------------------- | ---------- | ---------------------------------------------------------------------------------------- |
+| `id`            | `string`                         | `-`        | HTML `id` used for accessibility and to persist close status in `localStorage`.          |
+| `xColor`        | `string`                         | `-`        | Custom color for the close (X) icon.                                                     |
+| `variant`       | `"normal"` \| `"rainbow"`        | `"normal"` | Style variant of the banner. `"rainbow"` applies a colorful animated background.         |
+| `height`        | `string`                         | `"3rem"`   | Height of the banner.                                                                    |
+| `rainbowColors` | `string[]`                       | `[...]`    | Custom color stops for the rainbow background animation. Only used in `rainbow` variant. |
+| `changeLayout`  | `boolean`                        | `true`     | Whether to inject layout-affecting CSS variables (`--fd-banner-height`).                 |
+| `children`      | `React.ReactNode`                | `-`        | Content to be displayed inside the banner.                                               |
+| `className`     | `string`                         | `-`        | Additional Tailwind or custom classes for styling.                                       |
+| `...props`      | `HTMLAttributes<HTMLDivElement>` | `-`        | Additional div props passed to the banner container.                                     |
+
+`Button`
+
+| Prop        | Type                                              | Default     | Description                                   |
+| ----------- | ------------------------------------------------- | ----------- | --------------------------------------------- |
+| `variant`   | `"default"` \| `"destructive"` \| `"outline"` ... | `"default"` | Predefined visual style                       |
+| `size`      | `"default"` \| `"sm"` \| `"lg"` \| `"icon"`       | `"default"` | Predefined button sizes                       |
+| `asChild`   | `boolean`                                         | `false`     | Renders as child element (for `<Link>`, etc.) |
+| `className` | `string`                                          | `undefined` | Custom Tailwind classes                       |
+| `...props`  | `React.ButtonHTMLAttributes<HTMLButtonElement>`   | `–`         | All native button props supported             |

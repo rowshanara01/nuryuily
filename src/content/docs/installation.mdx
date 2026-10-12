@@ -1,0 +1,60 @@
+---
+title: Installation
+description: How to install dependencies and structure your app with nurui.
+---
+
+# Installation
+
+###### Learn how to install nurui components and set up your project.
+
+<Steps>
+
+<Step>Optional: Components list</Step>
+
+To see the full `list` of available components you can install:
+
+<Cli
+  dependencies={[
+    { label: "npm", command: "npx nurui list" },
+    { label: "pnpm", command: "pnpm dlx nurui list" },
+    { label: "bun", command: "bunx nurui list" },
+    { label: "yarn", command: "yarn dlx nurui list" },
+  ]}
+/>
+
+This will display all the components supported by nurui.
+
+<Step>Add Components</Step>
+
+You can now start adding components to your project.
+
+<Cli
+  dependencies={[
+    { label: "npm", command: "npx nurui add gradient-button" },
+    { label: "pnpm", command: "pnpm dlx nurui add gradient-button" },
+    { label: "bun", command: "bunx nurui add gradient-button" },
+    { label: "yarn", command: "yarn dlx nurui add gradient-button" },
+  ]}
+/>
+
+This will generate the component in: `components/nurui/GradientButton.tsx`
+
+<Step>Import and use the component</Step>
+
+The command above will add the `GradientButton` component to your project. You can then import it like this:
+
+<CodeBlock
+code={`import { GradientButton } from "@/components/nurui/GradientButton";
+
+export default function Home() {
+  return (
+    <div>
+      <GradientButton />
+    </div>
+  );
+}`}
+/>
+
+<Step>Update the import paths to fit your project setup</Step>
+
+</Steps>

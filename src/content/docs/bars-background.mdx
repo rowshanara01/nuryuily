@@ -1,0 +1,48 @@
+---
+title: "bars background"
+description: "A stylish bars background component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="barsBackground" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/gradient-bars.tsx`
+
+<CodeBlock componentName="barsBackground" fileName="gradient-bars" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop     | Type       | Default                       | Description                                         |
+| -------- | ---------- | ----------------------------- | --------------------------------------------------- |
+| `bars`   | `number`   | `20`                          | Number of vertical bars rendered in the background. |
+| `colors` | `string[]` | `['#3ca2faD9','transparent']` | Gradient colors for each bar (top to bottom).       |

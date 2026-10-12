@@ -1,0 +1,66 @@
+---
+title: "singin-form"
+description: "A stylish singin-form component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="singinForm" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/singin-form.tsx`
+
+<CodeBlock componentName="singinForm" fileName="singin-form" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`Input`
+
+| Prop        | Type                                          | Default | Description                                                                 |
+| ----------- | --------------------------------------------- | ------- | --------------------------------------------------------------------------- |
+| `type`      | `string`                                      | `-`     | Input field type (e.g., `"email"`, `"password"`, etc.).                     |
+| `className` | `string`                                      | `-`     | Additional Tailwind CSS classes for styling customization.                  |
+| `...props`  | `React.InputHTMLAttributes<HTMLInputElement>` | `-`     | All other default input props like `value`, `onChange`, `placeholder`, etc. |
+
+`(Optional) LoginForm Props (to make it reusable)`
+
+| Prop         | Type                                        | Default         | Description                                       |
+| ------------ | ------------------------------------------- | --------------- | ------------------------------------------------- |
+| `onSubmit`   | `(email: string, password: string) => void` | Internal Logic  | Callback when user submits the form.              |
+| `title`      | `string`                                    | "Welcome Back"  | Title displayed at the top.                       |
+| `subtitle`   | `string`                                    | "Sign in to..." | Subtitle message under the title.                 |
+| `showGoogle` | `boolean`                                   | `true`          | Whether to show the "Sign in with Google" button. |

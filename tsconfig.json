@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "src/types/next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/icons/Viber.Icontsx",
+    "src/cli/components/js/cursor/blink-cursor/BlinkButton.jsx",
+    "next.config.ts",
+    "src/app/(docs)/docs/[slug]/page.tsx",
+    "src/cli/utils/convertTsxToJsx.js",
+    "src/content/docs/info-card.mdx",
+    "src/content/docs/animated-form.mdx",
+    "src/scripts/generateMetadata.ts"
+  ],
+  "typeRoots": ["./types", "./node_modules/@types"],
+  "exclude": ["node_modules"]
+}

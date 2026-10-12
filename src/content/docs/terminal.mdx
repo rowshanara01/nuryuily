@@ -1,0 +1,75 @@
+---
+title: "terminal"
+description: "A stylish terminal component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="terminal" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/terminal.tsx`
+
+<CodeBlock componentName="terminal" fileName="terminal" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`TerminalDemo`
+
+| Prop        | Type        | Default  | Description                                                |
+| ----------- | ----------- | -------- | ---------------------------------------------------------- |
+| `children`  | `ReactNode` | Required | The content inside the terminal (animated text and spans). |
+| `className` | `string`    | `""`     | Custom classes for the terminal container.                 |
+
+`Terminal`
+
+| Prop        | Type        | Default  | Description                                                |
+| ----------- | ----------- | -------- | ---------------------------------------------------------- |
+| `children`  | `ReactNode` | Required | The content inside the terminal (animated text and spans). |
+| `className` | `string`    | `""`     | Custom classes for the terminal container.                 |
+
+`TypingAnimation`
+
+| Prop        | Type                | Default  | Description                                                     |
+| ----------- | ------------------- | -------- | --------------------------------------------------------------- |
+| `children`  | `string`            | Required | The text to animate (must be a string).                         |
+| `className` | `string`            | `""`     | Custom classes for the animated text.                           |
+| `duration`  | `number`            | `60`     | Speed of typing animation (milliseconds per character).         |
+| `delay`     | `number`            | `0`      | Delay before typing animation starts (milliseconds).            |
+| `as`        | `React.ElementType` | `"span"` | The element type used for rendering (e.g., `span`, `div`, `p`). |
+
+`AnimatedSpan`
+
+| Prop        | Type        | Default  | Description                                    |
+| ----------- | ----------- | -------- | ---------------------------------------------- |
+| `children`  | `ReactNode` | Required | Content to animate (can be any React element). |
+| `delay`     | `number`    | `0`      | Delay before the span appears (milliseconds).  |
+| `className` | `string`    | `""`     | Custom classes for styling the animated span.  |

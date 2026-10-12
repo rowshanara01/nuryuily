@@ -1,0 +1,105 @@
+---
+title: "story"
+description: "A stylish story component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="story" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/story-button.tsx`
+
+<CodeBlock componentName="story" fileName="story-button" />
+
+`components/nurui/story-dialog.tsx`
+
+<CodeBlock componentName="story" fileName="story-dialog" />
+
+`components/nurui/story.tsx`
+
+<CodeBlock componentName="story" fileName="story" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`story-button`
+
+| Prop        | Type                                                                                    | Default     | Description                                                                    |
+| ----------- | --------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------ |
+| `variant`   | `"default"` \| `"destructive"` \| `"outline"` \| `"secondary"` \| `"ghost"` \| `"link"` | `"default"` | Visual style of the button.                                                    |
+| `size`      | `"default"` \| `"sm"` \| `"lg"` \| `"icon"`                                             | `"default"` | Size of the button.                                                            |
+| `asChild`   | `boolean`                                                                               | `false`     | If true, renders a `Slot` component instead of a `button`. Useful for nesting. |
+| `className` | `string`                                                                                | `-`         | Tailwind classes to override styles.                                           |
+| `...props`  | `ButtonHTMLAttributes<HTMLButtonElement>`                                               | `-`         | Standard button props like `onClick`, `disabled`, etc.                         |
+
+`story-dialog`
+
+| Component           | Description                                                             |
+| ------------------- | ----------------------------------------------------------------------- |
+| `Dialog`            | Wrapper component (Radix UI Dialog Root).                               |
+| `DialogTrigger`     | Element that triggers the dialog to open.                               |
+| `DialogPortal`      | Portal to render the dialog outside the DOM hierarchy.                  |
+| `DialogOverlay`     | Backdrop overlay with dark semi-transparent background.                 |
+| `DialogContent`     | The main dialog container (centered and animated).                      |
+| `DialogClose`       | Button to close the dialog (includes icon and screen reader text).      |
+| `DialogHeader`      | Wrapper for dialog title and optional description (vertical layout).    |
+| `DialogFooter`      | Footer section with buttons/actions (column on mobile, row on desktop). |
+| `DialogTitle`       | Title of the dialog (styled with larger font and tracking).             |
+| `DialogDescription` | Supporting text or body content of the dialog.                          |
+
+`story`
+
+| Prop          | Type     | Default | Description                                                              |
+| ------------- | -------- | ------- | ------------------------------------------------------------------------ |
+| `mediaLength` | `number` | `-`     | Total number of slides or story items.                                   |
+| `duration`    | `number` | `2000`  | Duration (in ms) each story is visible before progressing automatically. |
+| `className`   | `string` | `-`     | Tailwind classes for custom container styling.                           |
+
+`StoryProgress`
+
+| Prop                  | Type     | Default | Description                                        |
+| --------------------- | -------- | ------- | -------------------------------------------------- |
+| `progressWrapClass`   | `string` | `-`     | Custom class for the outer progress bar container. |
+| `progressActiveClass` | `string` | `-`     | Custom class for the inner animated progress bar.  |
+| `className`           | `string` | `-`     | Class for the wrapper around all progress items.   |
+
+`StorySlide`
+
+| Prop        | Type     | Default | Description                                                       |
+| ----------- | -------- | ------- | ----------------------------------------------------------------- |
+| `index`     | `number` | `-`     | The index of the current story slide (matches with currentIndex). |
+| `className` | `string` | `-`     | Additional Tailwind classes for styling.                          |

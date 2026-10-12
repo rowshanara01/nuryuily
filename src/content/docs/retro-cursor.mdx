@@ -1,0 +1,53 @@
+---
+title: "retro cursor"
+description: "A stylish following retro cursor component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="retroCursor" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`utils/use-mouse-position`
+
+<CodeBlock snippetKey="use-mouse-position-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/retro-cursor.tsx`
+
+<CodeBlock componentName="retroCursor" fileName="retro-cursor" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop       | Type                        | Default | Description                     |
+| ---------- | --------------------------- | ------- | ------------------------------- |
+| `position` | `{ x: number; y: number; }` | `–`     | The current cursor coordinates. |

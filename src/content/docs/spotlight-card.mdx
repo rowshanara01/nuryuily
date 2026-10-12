@@ -1,0 +1,50 @@
+---
+title: "spotlight-card"
+description: "A stylish spotlight-card component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="spotlightCard" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/spotlight-card.tsx`
+
+<CodeBlock componentName="spotlightCard" fileName="spotlight-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop         | Type                                                 | Default     | Description                                                                |
+| ------------ | ---------------------------------------------------- | ----------- | -------------------------------------------------------------------------- |
+| `children`   | `ReactNode`                                          | Required    | Content to be displayed inside the card.                                   |
+| `className`  | `string`                                             | `''`        | Additional custom Tailwind CSS or utility classes for the card.            |
+| `glowColor`  | `'blue' \| 'purple' \| 'green' \| 'red' \| 'orange'` | `'blue'`    | Glow hue color used in the dynamic gradient.                               |
+| `size`       | `'sm' \| 'md' \| 'lg'`                               | `'md'`      | Predefined size of the card (ignored if `customSize` is `true`).           |
+| `width`      | `string \| number`                                   | `undefined` | Custom width (used when `customSize` is `true`).                           |
+| `height`     | `string \| number`                                   | `undefined` | Custom height (used when `customSize` is `true`).                          |
+| `customSize` | `boolean`                                            | `false`     | When `true`, disables preset sizing (`size`) and allows full size control. |
+

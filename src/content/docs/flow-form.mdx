@@ -1,0 +1,86 @@
+---
+title: "flow-form"
+description: "A stylish flow-form component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="flowForm" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/flow-form.tsx`
+
+<CodeBlock componentName="flowForm" fileName="flow-form" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`CanvasRevealEffect`
+
+| Prop                 | Type         | Default                                            | Description                                                                                   |
+| -------------------- | ------------ | -------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `animationSpeed`     | `number`     | `10`                                               | Controls the speed of the dot matrix animation. Higher means faster animation.                |
+| `opacities`          | `number[]`   | `[0.3, 0.3, 0.3, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 1]` | Array of opacity values used by dots to create the reveal effect.                             |
+| `colors`             | `number[][]` | `[[0, 255, 255]]`                                  | Array of RGB colors (each as `[r,g,b]` 0–255) used for the dots in the matrix.                |
+| `containerClassName` | `string`     | `""`                                               | Additional CSS class(es) applied to the container div wrapping the canvas.                    |
+| `dotSize`            | `number`     | `3`                                                | Diameter of each dot in the dot matrix.                                                       |
+| `showGradient`       | `boolean`    | `true`                                             | Whether to show a subtle gradient overlay on top of the canvas for visual depth.              |
+| `reverse`            | `boolean`    | `false`                                            | Controls animation direction: `false` = intro (dots appear), `true` = outro (dots disappear). |
+
+`DotMatrix`
+
+| Prop        | Type         | Default                                                        | Description                                                                                     |                                                                                                 |
+| ----------- | ------------ | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `colors`    | `number[][]` | `[[0, 0, 0]]`                                                  | RGB colors for the dots, each color is an array of 3 numbers \[r, g, b] in 0–255 range.         |                                                                                                 |
+| `opacities` | `number[]`   | `[0.04, 0.04, 0.04, 0.04, 0.04, 0.08, 0.08, 0.08, 0.08, 0.14]` | Array of opacity values used in the dot animation.                                              |                                                                                                 |
+| `totalSize` | `number`     | `20`                                                           | The grid size controlling the spacing of dots horizontally and vertically.                      |                                                                                                 |
+| `dotSize`   | `number`     | `2`                                                            | Diameter size of each dot.                                                                      |                                                                                                 |
+| `shader`    | `string`     | `""`                                                           | String that controls shader flags (e.g., animation speed, reverse flag) parsed inside uniforms. |                                                                                                 |
+| `center`    | \`("x"       | "y")\[]\`                                                      | `["x", "y"]`                                                                                    | Specifies which axes should be centered in the dot matrix animation (usually both "x" and "y"). |
+
+`Shader`
+
+| Prop       | Type                                              | Default | Description                                                                        |
+| ---------- | ------------------------------------------------- | ------- | ---------------------------------------------------------------------------------- |
+| `source`   | `string`                                          | —       | GLSL fragment shader source code defining the rendering and animation logic.       |
+| `uniforms` | `{ [key: string]: { value: any; type: string } }` | —       | Uniform variables passed to the shader, controlling colors, time, resolution, etc. |
+| `maxFps`   | `number`                                          | `60`    | Maximum frames per second to limit animation update frequency (optional).          |
+
+`SignInPage`
+
+| Prop        | Type     | Default | Description                                                                               |
+| ----------- | -------- | ------- | ----------------------------------------------------------------------------------------- |
+| `className` | `string` | `""`    | Additional CSS classes applied to the main container for layout or styling customization. |

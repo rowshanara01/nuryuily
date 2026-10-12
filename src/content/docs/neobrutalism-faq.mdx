@@ -1,0 +1,49 @@
+---
+title: "neobrutalism-faq"
+description: "A stylish neobrutalism-faq component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="neobrutalismFaq" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/neobrutalism-faq.tsx`
+
+<CodeBlock componentName="neobrutalismFaq" fileName="neobrutalism-faq" />
+
+<Step>Update the import paths to fit your project setup</Step>
+ 
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop       | Type        | Default                        | Description                                                                  |
+| ---------- | ----------- | ------------------------------ | ---------------------------------------------------------------------------- |
+| `data`     | `FaqItem[]` | `defaultFaqData`               | Array of FAQ items to display. Each item has `id`, `question`, and `answer`. |
+| `title`    | `string`    | `"FAQ"`                        | The main heading text displayed at the top of the FAQ section.               |
+| `subtitle` | `string`    | `"FREQUENTLY ASKED QUESTIONS"` | The subheading text displayed below the title.                               |

@@ -1,0 +1,77 @@
+---
+title: "animated list"
+description: "A stylish animated list component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="animatedList" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/animated-list-items.tsx`
+
+<CodeBlock componentName="animatedList" fileName="animated-list-items" />
+
+`components/nurui/notification.tsx`
+
+<CodeBlock componentName="animatedList" fileName="notification" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`AnimatedListDemo`
+
+| Prop        | Type     | Default | Description                                                   |
+| ----------- | -------- | ------- | ------------------------------------------------------------- |
+| `className` | `string` | `""`    | Additional classes to customize the wrapper container styling |
+
+`AnimatedList`
+
+| Prop        | Type        | Default    | Description                                                              |
+| ----------- | ----------- | ---------- | ------------------------------------------------------------------------ |
+| `children`  | `ReactNode` | `Required` | List of items (e.g., notifications) to animate and display sequentially. |
+| `className` | `string`    | `""`       | Custom Tailwind/utility classes for styling the list container.          |
+| `delay`     | `number`    | `1000`     | Delay (in milliseconds) before the next list item appears.               |
+
+`AnimatedListItem`
+
+| Prop       | Type        | Default    | Description                                           |
+| ---------- | ----------- | ---------- | ----------------------------------------------------- |
+| `children` | `ReactNode` | `Required` | Content to animate in when added to the animated list |
+
+`Notification`
+
+| Prop          | Type     | Default    | Description                                          |
+| ------------- | -------- | ---------- | ---------------------------------------------------- |
+| `name`        | `string` | `Required` | Notification title text.                             |
+| `description` | `string` | `Required` | Short descriptive text shown under the title.        |
+| `icon`        | `string` | `Required` | Emoji or icon displayed inside the colored icon box. |
+| `color`       | `string` | `Required` | Background color of the icon container.              |
+| `time`        | `string` | `Required` | Timestamp or relative time shown next to the title.  |

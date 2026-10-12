@@ -1,0 +1,46 @@
+---
+title: "hacker cursor"
+description: "A stylish following hacker cursor component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="hackerCursor" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/hacker-cursor.tsx`
+
+<CodeBlock componentName="hackerCursor" fileName="hacker-cursor" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop           | Type     | Default                                                  | Description                                                             |
+| -------------- | -------- | -------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `trailColor`   | `string` | `"#D0FBB6"`                                              | Color of the trail (supports HEX format).                               |
+| `dotSize`      | `number` | `4`                                                      | Size of each square dot in pixels.                                      |
+| `fadeDuration` | `number` | `600`                                                    | Time in milliseconds for trail fade effect. Lower means faster fading.  |
+| `className`    | `string` | `"w-full h-full fixed inset-0 pointer-events-none z-50"` | CSS classes applied to the canvas element for positioning and layering. |

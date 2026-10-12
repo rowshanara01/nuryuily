@@ -1,0 +1,90 @@
+---
+title: "marquee-testimonial"
+description: "A stylish marquee-testimonial component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="marqueeTestimonial" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/marquee.tsx`
+
+<CodeBlock componentName="marqueeTestimonial" fileName="marquee" />
+
+`components/nurui/testimonial-card.tsx`
+
+<CodeBlock componentName="marqueeTestimonial" fileName="testimonial-card" />
+
+`components/nurui/rating-star`
+
+<CodeBlock componentName="marqueeTestimonial" fileName="rating-star" />
+
+`components/nurui/rating-icon`
+
+<CodeBlock componentName="marqueeTestimonial" fileName="rating-icon" />
+
+<Step>Update the import paths to fit your project setup</Step>
+ 
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`Marquee`
+
+| Prop           | Type              | Default | Description                                                              |
+| -------------- | ----------------- | ------- | ------------------------------------------------------------------------ |
+| `className`    | `string`          | `""`    | Optional CSS class name to apply custom styles to the marquee container. |
+| `reverse`      | `boolean`         | `false` | Reverses the direction of the marquee animation.                         |
+| `pauseOnHover` | `boolean`         | `false` | Pauses the marquee animation when hovered.                               |
+| `children`     | `React.ReactNode` | —       | The content to render inside the marquee.                                |
+| `vertical`     | `boolean`         | `false` | If `true`, animates vertically instead of horizontally.                  |
+| `repeat`       | `number`          | `4`     | Number of times the content should repeat inside the marquee.            |
+| `itemsCenter`  | `string`          | `""`    | Optional Tailwind classes to align items inside each marquee block.      |
+
+`TestimonialCard`
+
+| Prop        | Type     | Default | Description                                                                          |
+| ----------- | -------- | ------- | ------------------------------------------------------------------------------------ |
+| `position`  | `string` | —       | Job title or role of the testimonial author.                                         |
+| `name`      | `string` | —       | Name of the person giving the testimonial.                                           |
+| `review`    | `string` | —       | Review text provided in the testimonial.                                             |
+| `marginTop` | `string` | —       | Optional custom top margin class to control vertical spacing for responsive layouts. |
+
+`RatingStars`
+
+| Prop    | Type     | Default | Description                                           |
+| ------- | -------- | ------- | ----------------------------------------------------- |
+| `count` | `number` | `5`     | Number of stars to display.                           |
+| `size`  | `string` | —       | Tailwind size class for the stars (e.g., `"size-3"`). |
+
+`RatingIcon`
+
+| Prop   | Type      | Default    | Description                                                        |
+| ------ | --------- | ---------- | ------------------------------------------------------------------ |
+| `rate` | `boolean` | `false`    | Determines whether the star is active (yellow) or inactive (gray). |
+| `size` | `string`  | `"size-6"` | Tailwind size class for the icon’s size.                           |

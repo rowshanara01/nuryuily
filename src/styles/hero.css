@@ -1,0 +1,127 @@
+/* hero class */
+.icon-animation1 {
+  animation: float 2s ease-in infinite;
+  box-shadow:
+    0px 0px 10px 0px #ff6f04,
+    0px 0px 10px 0px #ff6f04;
+}
+
+.icon-animation2 {
+  animation: float 2.5s ease-in infinite;
+  box-shadow:
+    0px 0px 10px 0px #ffd600,
+    0px 0px 10px 0px #ffd600;
+}
+
+.icon-animation3 {
+  animation: float 3s ease-in-out infinite;
+  box-shadow:
+    0px 0px 10px 0px #35c1f1,
+    0px 0px 10px 0px #1f99ed;
+}
+
+.icon-animation4 {
+  animation: float 3.5s ease-in-out infinite;
+  box-shadow:
+    0px 0px 10px 0px #00acc1,
+    0px 0px 10px 0px #00acc1;
+}
+
+.icon-animation5 {
+  animation: float 2s ease-in-out infinite;
+  box-shadow:
+    0px 0px 10px 0px #f3ba29,
+    0px 0px 10px 0px #f3ba29;
+}
+
+.icon-animation6 {
+  animation: float 3s ease-in-out infinite;
+  box-shadow:
+    0px 0px 10px 0px #f06292,
+    0px 0px 10px 0px #f06292;
+}
+
+.icon-animation7 {
+  animation: float 2.5s ease-in-out infinite;
+  box-shadow:
+    0px 0px 10px 0px #8ac640,
+    0px 0px 10px 0px #8ac640;
+}
+
+.icon-animation8 {
+  animation: float 2s ease-in infinite;
+  box-shadow:
+    0px 0px 10px 0px #fff,
+    0px 0px 10px 0px #fff;
+}
+
+.icon-animation9 {
+  animation: float 2.5s ease-in infinite;
+  box-shadow:
+    0px 0px 10px 0px #58c4dc,
+    0px 0px 10px 0px #58c4dc;
+}
+
+.icon-animation10 {
+  animation: float 3s ease-in-out infinite;
+  box-shadow:
+    0px 0px 10px 0px #d4d4d4,
+    0px 0px 10px 0px #3c3c3c;
+}
+
+.icon-animation11 {
+  animation: float 3.5s ease-in-out infinite;
+  box-shadow:
+    0px 0px 10px 0px #1976d2,
+    0px 0px 10px 0px #1976d2;
+}
+
+.icon-animation12 {
+  animation: float 2s ease-in-out infinite;
+  box-shadow:
+    0px 0px 10px 0px #0af,
+    0px 0px 10px 0px #05f;
+}
+
+.icon-animation13 {
+  animation: float 3s ease-in-out infinite;
+  box-shadow:
+    0px 0px 10px 0px #4b393e,
+    0px 0px 10px 0px #4b393e;
+}
+
+.icon-animation14 {
+  animation: float 2.5s ease-in-out infinite;
+  box-shadow:
+    0px 0px 10px 0px #e77b76,
+    0px 0px 10px 0px #e77b76;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(10px) rotate(5deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* 🌞 Light mode override */
+.light {
+  .icon-animation8 {
+    box-shadow:
+      0px 0px 10px 0px #333,
+      0px 0px 10px 0px #333;
+  }
+
+  .icon-animation10 {
+    box-shadow:
+      0px 0px 10px 0px #3c3c3c,
+      0px 0px 10px 0px #3c3c3c;
+  }
+}

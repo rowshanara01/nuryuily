@@ -1,0 +1,58 @@
+---
+title: "gradient background"
+description: "A stylish gradient background component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="gradientBackground" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/gradient-background.tsx`
+
+<CodeBlock componentName="gradientBackground" fileName="gradient-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop                 | Type        | Default          | Description                                          |
+| -------------------- | ----------- | ---------------- | ---------------------------------------------------- |
+| `firstColor`         | `string`    | `"60, 162, 250"` | First gradient color (used for the first layer).     |
+| `secondColor`        | `string`    | `"60, 162, 250"` | Second gradient color (used for the second layer).   |
+| `thirdColor`         | `string`    | `"60, 162, 250"` | Third gradient color.                                |
+| `fourthColor`        | `string`    | `"60, 162, 250"` | Fourth gradient color.                               |
+| `fifthColor`         | `string`    | `"60, 162, 250"` | Fifth gradient color.                                |
+| `pointerColor`       | `string`    | `"60, 162, 250"` | Color of the interactive pointer gradient.           |
+| `size`               | `string`    | `"50%"`          | Size of each gradient layer.                         |
+| `blendingValue`      | `string`    | `"hard-light"`   | CSS mix-blend-mode for gradient blending.            |
+| `children`           | `ReactNode` | `undefined`      | Content to render on top of the background.          |
+| `className`          | `string`    | `undefined`      | Additional class names for content wrapper.          |
+| `interactive`        | `boolean`   | `true`           | Enables pointer-following gradient effect when true. |
+| `containerClassName` | `string`    | `undefined`      | Additional class names for the gradient container.   |

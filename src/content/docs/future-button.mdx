@@ -1,0 +1,67 @@
+---
+title: "future button"
+description: "A stylish future button component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="futureButton" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/future-button.tsx`
+
+<CodeBlock componentName="futureButton" fileName="future-button" />
+
+`components/nurui/future-frame.tsx`
+
+<CodeBlock componentName="futureButton" fileName="future-frame" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`future-button`
+
+| Prop          | Type                                                                                     | Default     | Description                                                                    |
+| ------------- | ---------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------ |
+| `variant`     | `"default"` \| `"accent"` \| `"destructive"` \| `"secondary"` \| `"success"`             | `"default"` | Controls color theme and drop-shadow style.                                    |
+| `shape`       | `"default"` \| `"flat"` \| `"simple"` \| `"tab-left"` \| `"tab-center"` \| `"tab-right"` | `"default"` | Visual button shape and corresponding SVG frame style.                         |
+| `customPaths` | `string[]`                                                                               | `undefined` | Custom SVG path definitions (as JSON strings) for the button's animated frame. |
+| `className`   | `string`                                                                                 | `-`         | Additional Tailwind classes.                                                   |
+| `children`    | `React.ReactNode`                                                                        | `-`         | Button label or inner content.                                                 |
+| `...props`    | `React.ButtonHTMLAttributes<HTMLButtonElement>`                                          | `-`         | All standard HTML `<button>` attributes like `onClick`, `type`, `disabled`.    |
+
+`future-frame`
+
+| Prop                 | Type                            | Default      | Description                                              |
+| -------------------- | ------------------------------- | ------------ | -------------------------------------------------------- |
+| `paths`              | `Paths` (array)                 | **Required** | SVG shape definitions with styling and command points.   |
+| `enableBackdropBlur` | `boolean`                       | `false`      | Enables background blur filter using `<feGaussianBlur>`. |
+| `className`          | `string`                        | `-`          | Additional Tailwind classes for the container.           |
+| `...props`           | `React.SVGProps<SVGSVGElement>` | `-`          | All standard SVG element attributes.                     |

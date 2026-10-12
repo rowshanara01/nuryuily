@@ -1,0 +1,56 @@
+---
+title: "dynamic-card"
+description: "A stylish dynamic-card component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="dynamicCard" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add the required CSS animations</Step>
+
+Add the following animations to your `globals.css` or others file.
+
+<CodeBlock isLanguage={false} snippetKey="dynamic-card-css" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/dynamic-card.tsx`
+
+<CodeBlock componentName="dynamicCard" fileName="dynamic-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop            | Type     | Default    | Description                                               |
+| --------------- | -------- | ---------- | --------------------------------------------------------- |
+| `normalTitle`   | `string` | `Required` | Regular part of the title, usually styled in plain text.  |
+| `colorfulTitle` | `string` | `Required` | Highlighted part of the title, usually styled with color. |
+| `description`   | `string` | `Required` | Description text shown below the title.                   |
+| `buttonText`    | `string` | `Required` | Text displayed inside the action button.                  |

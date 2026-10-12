@@ -1,0 +1,87 @@
+---
+title: "animated pricing"
+description: "A stylish animated pricing component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="animatedPricing" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/modern-pricing-page.tsx`
+
+<CodeBlock componentName="animatedPricing" fileName="modern-pricing-page" />
+
+`components/nurui/shader-canvas.tsx`
+
+<CodeBlock componentName="animatedPricing" fileName="shader-canvas" />
+
+`components/nurui/multi-type-ripple-buttons.tsx`
+
+<CodeBlock
+  componentName="animatedPricing"
+  fileName="multi-type-ripple-buttons"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`AnimatedPricingCard`
+
+| Prop            | Type                         | Default      | Description                                                  |
+| --------------- | ---------------------------- | ------------ | ------------------------------------------------------------ |
+| `planName`      | `string`                     | **required** | Name/title of the pricing plan.                              |
+| `description`   | `string`                     | **required** | Short description for the pricing plan.                      |
+| `price`         | `string`                     | **required** | Price of the plan (without currency symbol or `/mo`).        |
+| `features`      | `string[]`                   | **required** | List of features included in the plan.                       |
+| `buttonText`    | `string`                     | **required** | Text displayed on the action button.                         |
+| `isPopular`     | `boolean`                    | `false`      | If `true`, highlights the card as the "Most Popular" option. |
+| `buttonVariant` | `"primary"` \| `"secondary"` | `"primary"`  | Sets button style — primary or secondary variant.            |
+
+`ModernPricingPage`
+
+| Prop                     | Type                 | Default      | Description                                               |
+| ------------------------ | -------------------- | ------------ | --------------------------------------------------------- |
+| `title`                  | `React.ReactNode`    | **required** | Heading for the pricing page (can be string or JSX).      |
+| `subtitle`               | `React.ReactNode`    | **required** | Subtitle or description below the title.                  |
+| `plans`                  | `PricingCardProps[]` | **required** | Array of pricing plans to display as cards.               |
+| `showAnimatedBackground` | `boolean`            | `true`       | If `true`, displays the animated ShaderCanvas background. |
+
+`RippleButton`
+
+| Prop                         | Type                                               | Default                                            | Description                                                                                                    |
+| ---------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `children`                   | `React.ReactNode`                                  | **required**                                       | The content inside the button (text, elements, etc.).                                                          |
+| `onClick`                    | `(event: MouseEvent<HTMLButtonElement>) => void`   | `undefined`                                        | Callback function triggered when the button is clicked.                                                        |
+| `className`                  | `string`                                           | `''`                                               | Additional CSS classes to apply to the button.                                                                 |
+| `disabled`                   | `boolean`                                          | `false`                                            | If `true`, disables the button and disables click/ripple effects.                                              |
+| `variant`                    | `'default' \| 'hover' \| 'ghost' \| 'hoverborder'` | `'default'`                                        | Visual style variant of the button: default, hover ripple effect, ghost (transparent), or hover border effect. |
+| `rippleColor`                | `string`                                           | `'var(--button-ripple-color,rgba(0, 0, 0, 0.1))'`| Custom color for the JS click ripple effect (overrides default).                                             |
+| `rippleDuration`             | `number`                                           | `600`                                              | Duration in milliseconds of the JS click ripple animation for all variants.                                    |
+| `hoverBaseColor`             | `string`                                           | `'#6996e2'`                                        | Base color for the hover variant ripple background.                                                            |
+| `hoverRippleColor`           | `string`                                           | `undefined`                                        | Override color for the hover ripple effect in the 'hover' variant.                                             |
+| `hoverBorderEffectColor`     | `string`                                           | `'#6996e277'`                                      | Color of the visual border effect in the 'hoverborder' variant.                                                |
+| `hoverBorderEffectThickness` | `string`                                           | `'0.3em'`                                          | Thickness of the border effect in the 'hoverborder' variant (e.g., `"0.3em"`, `"2px"`).                        |

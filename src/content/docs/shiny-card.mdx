@@ -1,0 +1,55 @@
+---
+title: "shiny-card"
+description: "A stylish shiny-card component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="shinyCard" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add the required CSS animations</Step>
+
+Add the following animations to your `globals.css` or others file.
+
+<CodeBlock isLanguage={false} snippetKey="shiny-card-css" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/shiny-card.tsx`
+
+<CodeBlock componentName="shinyCard" fileName="shiny-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop         | Type                  | Default | Description                                            |
+| ------------ | --------------------- | ------- | ------------------------------------------------------ |
+| featureName  | `string`              | `–`     | Title of the feature section displayed on the card.    |
+| featureItems | `string[]`            | `–`     | List of feature descriptions to be rendered in a list. |
+| icon         | `ReactNode \| string` | `–`     | An icon or string displayed at the top of the card.    |

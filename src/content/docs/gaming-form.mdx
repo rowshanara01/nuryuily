@@ -1,0 +1,75 @@
+---
+title: "gaming-form"
+description: "A stylish gaming-form component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="gamingForm" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/gaming-form.tsx`
+
+<CodeBlock componentName="gamingForm" fileName="gaming-form" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`FormInput`
+
+| Prop          | Type                                               | Default | Description                                                |
+| ------------- | -------------------------------------------------- | ------- | ---------------------------------------------------------- |
+| `icon`        | `React.ReactNode`                                  | `-`     | Icon element displayed inside the input field (left side). |
+| `type`        | `string`                                           | `-`     | HTML input type (e.g., `"text"`, `"email"`, `"password"`). |
+| `placeholder` | `string`                                           | `-`     | Placeholder text for the input field.                      |
+| `value`       | `string`                                           | `-`     | Input value, controlled by React state.                    |
+| `onChange`    | `(e: React.ChangeEvent<HTMLInputElement>) => void` | `-`     | Function to update the input's value.                      |
+| `required`    | `boolean`                                          | `false` | Whether the input is required for submission.              |
+
+`SocialButton`
+
+| Prop   | Type              | Default | Description                                                        |
+| ------ | ----------------- | ------- | ------------------------------------------------------------------ |
+| `icon` | `React.ReactNode` | `-`     | Icon representing the social platform (e.g., Chrome, Twitter).     |
+| `name` | `string`          | `-`     | (Optional) Name of the social platform (not used in current code). |
+
+`ToggleSwitch`
+
+| Prop       | Type         | Default | Description                                          |
+| ---------- | ------------ | ------- | ---------------------------------------------------- |
+| `checked`  | `boolean`    | `false` | Indicates whether the toggle is on or off.           |
+| `onChange` | `() => void` | `-`     | Function triggered when the toggle is switched.      |
+| `id`       | `string`     | `-`     | HTML `id` used for accessibility and input labeling. |
+
+`VideoBackground`
+
+| Prop       | Type     | Default | Description                                   |
+| ---------- | -------- | ------- | --------------------------------------------- |
+| `videoUrl` | `string` | `-`     | URL of the background video (must be `.mp4`). |

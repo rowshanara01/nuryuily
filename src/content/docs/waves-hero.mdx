@@ -1,0 +1,57 @@
+---
+title: "waves-hero"
+description: "A stylish waves-hero component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="wavesHero" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/waves-hero.tsx`
+
+<CodeBlock componentName="wavesHero" fileName="waves-hero" />
+
+`components/nurui/button.tsx`
+
+<CodeBlock componentName="wavesHero" fileName="button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop       | Type | Default | Description                               |
+| ---------- | ---- | ------- | ----------------------------------------- |
+| _No props_ | –    | –       | This component does not accept any props. |

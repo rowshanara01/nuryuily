@@ -1,0 +1,56 @@
+---
+title: "wave-card"
+description: "A stylish wave-card component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="waveCard" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add the required CSS animations</Step>
+
+Add the following animations to your `globals.css` or others file.
+
+<CodeBlock isLanguage={false} snippetKey="wave-card-css" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/wave-card.tsx`
+
+<CodeBlock componentName="waveCard" fileName="wave-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop          | Type     | Default    | Description                              |
+| ------------- | -------- | ---------- | ---------------------------------------- |
+| `tags`        | `string` | `Required` | Tag or label displayed above the title.  |
+| `title`       | `string` | `Required` | Main title text displayed on the card.   |
+| `description` | `string` | `Required` | Description text shown below the title.  |
+| `buttonText`  | `string` | `Required` | Text displayed inside the action button. |

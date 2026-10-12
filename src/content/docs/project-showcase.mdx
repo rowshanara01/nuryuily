@@ -1,0 +1,94 @@
+---
+title: "project-showcase"
+description: "A stylish project-showcase component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="projectShowCase" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/halomot-button.tsx`
+
+<CodeBlock componentName="projectShowCase" fileName="halomot-button" />
+
+`components/nurui/project-showcase.tsx`
+
+<CodeBlock componentName="projectShowCase" fileName="project-showcase" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`HalomotButton`
+
+| Prop                | Type                                 | Default                     | Description                                      |
+| ------------------- | ------------------------------------ | --------------------------- | ------------------------------------------------ |
+| `gradient`          | `string`                             | `linear-gradient(...)`      | Gradient border of the button.                   |
+| `inscription`       | `string`                             | `required`                  | Text displayed inside the button.                |
+| `onClick`           | `() => void`                         | `required`                  | Click handler function.                          |
+| `fillWidth`         | `boolean`                            | `false`                     | If `true`, button takes full container width.    |
+| `fixedWidth`        | `string`                             | `-`                         | Fixed width in px, %, rem, etc. (e.g., `172px`). |
+| `href`              | `string`                             | `-`                         | Makes button act as a link (`<a>`).              |
+| `backgroundColor`   | `string`                             | `"#fff"`                    | Background color of the inner button.            |
+| `icon`              | `ReactElement<React.HTMLAttributes>` | `-`                         | Icon element placed before the text.             |
+| `borderWidth`       | `string`                             | `"1px"`                     | Width of the gradient border around the button.  |
+| `padding`           | `string`                             | `"1rem 4rem"` or `"1rem 0"` | Padding inside the button.                       |
+| `outerBorderRadius` | `string`                             | `"6.34px"`                  | Border radius for outer gradient layer.          |
+| `innerBorderRadius` | `string`                             | `"6px"`                     | Border radius for the inner button.              |
+| `textColor`         | `string`                             | `"#000"`                    | Text color.                                      |
+| `hoverTextColor`    | `string`                             | `undefined`                 | Text color when hovered.                         |
+
+`ProjectShowCase`
+
+| Prop                             | Type                                               | Default                                      | Description                                                                            |
+| -------------------------------- | -------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `testimonials`                   | `Testimonial[]`                                    | `required`                                   | Array of testimonials with `name`, `quote`, `designation`, `src`, and optional `link`. |
+| `autoplay`                       | `boolean`                                          | `false`                                      | Automatically switch testimonials every 5 seconds.                                     |
+| `colors`                         | `{ name, position, testimony }`                    | `{ name: "#fff", position: "gray-500", ...}` | Text color settings.                                                                   |
+| `fontSizes`                      | `{ name, position, testimony }`                    | `{ name: "2xl", position: "sm", ...}`        | Font size settings.                                                                    |
+| `spacing`                        | `{ top, bottom, lineHeight, nameTop, ... }`        | `{ top: "20", bottom: "20", ... }`           | Margin/padding/spacing configuration.                                                  |
+| `desktopVersionBottomThreshold`  | `number`                                           | `1024`                                       | Breakpoint width for mobile vs desktop layout.                                         |
+| `maxImageWidth`                  | `number`                                           | `undefined`                                  | Optional max width for images.                                                         |
+| `imageWidthPercentage`           | `number`                                           | `undefined`                                  | Optional width percentage for images.                                                  |
+| `mobile`                         | `{ fontSizes, spacing }`                           | `undefined`                                  | Mobile-specific overrides for font sizes and spacing.                                  |
+| `imageAspectRatio`               | `number`                                           | `1.37`                                       | Ratio for image container sizing.                                                      |
+| `isRTL`                          | `boolean`                                          | `false`                                      | Right-to-left layout.                                                                  |
+| `onItemClick`                    | `(link: string) => void`                           | `undefined`                                  | Callback when “Open Web App” button is clicked.                                        |
+| `outerRounding`                  | `string`                                           | `"18.2px"`                                   | Border radius for image outer container.                                               |
+| `innerRounding`                  | `string`                                           | `"18px"`                                     | Border radius for image inner container.                                               |
+| `outlineColor`                   | `string`                                           | `"#33313d"`                                  | Image border color.                                                                    |
+| `hoverOutlineColor`              | `string`                                           | `"#403d4d"`                                  | Image border color on hover.                                                           |
+| `buttonInscriptions`             | `{ previousButton, nextButton, openWebAppButton }` | See default below                            | Labels for the control buttons.                                                        |
+| `halomotButtonGradient`          | `string`                                           | `"linear-gradient(to right, #a123f4, ...)`   | Gradient used for all `HalomotButton`s in the component.                               |
+| `halomotButtonBackground`        | `string`                                           | `"#111014"`                                  | Inner background color of buttons.                                                     |
+| `halomotButtonTextColor`         | `string`                                           | `"#fff"`                                     | Button text color.                                                                     |
+| `halomotButtonOuterBorderRadius` | `string`                                           | `"6.34px"`                                   | Gradient layer rounding for buttons.                                                   |
+| `halomotButtonInnerBorderRadius` | `string`                                           | `"6px"`                                      | Inner clickable area rounding for buttons.                                             |
+| `halomotButtonHoverTextColor`    | `string`                                           | `undefined`                                  | Text color on hover.                                                                   |

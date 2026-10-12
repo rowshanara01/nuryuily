@@ -1,0 +1,71 @@
+---
+title: "gradient-button"
+description: "A stylish gradient button component for modern UIs, built with accessibility and animation in mind."
+keywords:
+  - button
+  - ui
+  - react
+  - nurui
+---
+
+<ComponentPreview componentName="gradientButton" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Add the required CSS animations</Step>
+
+Add the following animations to your `globals.css` or others file.
+
+<CodeBlock isLanguage={false} snippetKey="gradient-button-css" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/gradient-button.tsx`
+
+<CodeBlock componentName="gradientButton" fileName="gradient-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop           | Type       | Default                                                                                      | Description                                                         |
+| -------------- | ---------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `borderWidth`  | `number`   | `2`                                                                                          | Width of the animated border (in pixels).                           |
+| `colors`       | `string[]` | `[ "#FF0000", "#FFA500", "#FFFF00", "#008000", "#0000FF", "#4B0082", "#EE82EE", "#FF0000" ]` | Array of gradient colors used for the border animation.             |
+| `duration`     | `number`   | `2500`                                                                                       | Duration (in milliseconds) for the rainbow gradient animation loop. |
+| `borderRadius` | `number`   | `8`                                                                                          | Border radius for the button corners (in pixels).                   |
+| `blur`         | `number`   | `4`                                                                                          | Blur level for the animated gradient background.                    |
+| `className`    | `string`   | `-`                                                                                          | Additional CSS classes to apply to the button.                      |
+| `bgColor`      | `string`   | `"#000"`                                                                                     | Background color of the button.                                     |
+| `text`         | `string`   | `"Zooooooooooom 🚀"`                                                                         | Text content displayed inside the button.                           |

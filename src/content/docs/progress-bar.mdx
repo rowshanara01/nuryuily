@@ -1,0 +1,60 @@
+---
+title: "progress bar"
+description: "A stylish progress bar component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="progressBar" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/progress-bar.tsx`
+
+<CodeBlock componentName="progressBar" fileName="progress-bar" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`ProgressBarDemo`
+
+| Prop        | Type     | Default | Description                                                   |
+| ----------- | -------- | ------- | ------------------------------------------------------------- |
+| `className` | `string` | `""`    | Additional CSS classes for customizing the wrapper container. |
+
+`ProgressBar`
+
+| Prop                  | Type     | Default    | Description                                                          |
+| --------------------- | -------- | ---------- | -------------------------------------------------------------------- |
+| `max`                 | `number` | `100`      | The maximum value the progress bar can reach.                        |
+| `min`                 | `number` | `0`        | The minimum value the progress bar can have.                         |
+| `value`               | `number` | `0`        | The current value of the progress bar.                               |
+| `gaugePrimaryColor`   | `string` | `Required` | The color of the active (progress) portion of the circular gauge.    |
+| `gaugeSecondaryColor` | `string` | `Required` | The color of the inactive (remaining) portion of the circular gauge. |
+| `className`           | `string` | `""`       | Custom CSS classes for styling the circular progress container.      |

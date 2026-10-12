@@ -1,0 +1,58 @@
+---
+title: "text-button"
+description: "A stylish text button component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="textButton" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/text-button.tsx`
+
+<CodeBlock componentName="textButton" fileName="text-button" />
+
+<Step>Update the import paths to fit your project setup</Step>
+ 
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop            | Type                          | Default | Description                                                                |
+| --------------- | ----------------------------- | ------- | -------------------------------------------------------------------------- |
+| `effectOnHover` | `boolean`                     | `true`  | Enables the text animation when the button is hovered.                     |
+| `effectOnLoad`  | `boolean`                     | `true`  | Triggers the text animation once on component load.                        |
+| `className`     | `string`                      | `-`     | Custom CSS classes to apply to the button.                                 |
+| `children`      | `React.ReactNode`             | `-`     | Text or elements to display inside the button. Animation is applied to it. |
+| `onClick`       | `(event: MouseEvent) => void` | `-`     | Function called when the button is clicked. Also triggers the animation.   |
+| `...props`      | `ComponentProps<"button">`    | `-`     | Inherits all native HTML button attributes like `type`, `disabled`, etc.   |

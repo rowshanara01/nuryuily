@@ -1,0 +1,41 @@
+---
+title: "Play Button"
+description: "A stylish play button component with indigo glow and animation effects."
+---
+
+<ComponentPreview componentName="playButton" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+  <Steps>
+    <Step>Install dependencies</Step>
+
+    <Cli isManual/>
+
+    <Step>Copy and paste the following code into your project.</Step>
+    `components/nurui/play-button.tsx`
+    <CodeBlock componentName="playButton" fileName="play-button" />
+
+  </Steps>
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop     | Type     | Default     | Description                  |
+| -------- | -------- | ----------- | ---------------------------- |
+| `text`   | `string` | `Play demo` | The text displayed on button |
+| ...props | `button` | `—`         | Standard button props        |

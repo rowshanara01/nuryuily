@@ -1,0 +1,81 @@
+---
+title: "rocket footer"
+description: "A smooth and animated rocket footer component with scroll-to-top functionality, built for modern and accessible UI experiences."
+keywords:
+  - rocket footer
+  - scroll to top
+  - ui component
+  - react
+  - nurui
+  - footer animation
+  - scroll animation
+  - rocket animation
+  - tailwind css
+  - react icons
+  - accessibility
+---
+
+<ComponentPreview componentName="rocketFooter" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Add the required CSS animations</Step>
+
+Add the following animations to your `globals.css` or others file.
+
+<CodeBlock isLanguage={false} snippetKey="rocket-footer-css" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/rocket-footer.tsx`
+
+<CodeBlock componentName="rocketFooter" fileName="rocket-footer" />
+
+`components/nurui/nurui-logo.tsx`
+
+<CodeBlock componentName="rocketFooter" fileName="nurui-logo" />
+
+`components/nurui/rocket-scroll-to-top.tsx`
+
+<CodeBlock componentName="rocketFooter" fileName="rocket-scroll-to-top" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`RocketScrollToTop`
+
+| Prop         | Type     | Default | Description                                                                                                                              |
+| ------------ | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `className?` | `string` | `""`    | Additional Tailwind or custom classes applied to the wrapper div containing the rocket scroll button. Useful for positioning or theming. |

@@ -1,0 +1,50 @@
+---
+title: "premium-testimonial"
+description: "A stylish premium-testimonial component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="premiumTestimonial" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/premium-testimonial.tsx`
+
+<CodeBlock componentName="premiumTestimonial" fileName="premium-testimonial" />
+
+<Step>Update the import paths to fit your project setup</Step>
+ 
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop       | Type     | Default                                                                                               | Description                                 |
+| ---------- | -------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| `title`    | `string` | `"Trusted by"`                                                                                        | Top-level heading to represent brand trust. |
+| `subTitle` | `string` | `"Industry Leaders"`                                                                                  | Secondary heading below the main title.     |
+| `tagline`  | `string` | `"Client Success Stories"`                                                                            | Small label or section title.               |
+| `des`      | `string` | `"Join thousands of businesses already transforming their operations with our premium AI solutions."` | Supporting paragraph text.                  |

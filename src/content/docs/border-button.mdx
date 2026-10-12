@@ -1,0 +1,54 @@
+---
+title: "border-button"
+description: "A stylish border button component for modern UIs, built with accessibility and  in mind."
+---
+
+<ComponentPreview componentName="borderButton" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/border-button.tsx`
+
+<CodeBlock componentName="borderButton" fileName="border-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop        | Type     | Default | Description                                       |
+| ----------- | -------- | ------- | ------------------------------------------------- |
+| `text`      | `string` | `-`     | Text content displayed inside the button.         |
+| `className` | `string` | `-`     | Custom Tailwind class names for styling override. |

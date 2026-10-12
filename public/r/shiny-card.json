@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shiny-card",
+  "dependencies": [
+    "react-icons"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "./src/components/nurui/shiny-card-demo.tsx",
+      "content": "import React from \"react\";\nimport { FaRocket } from \"react-icons/fa6\";\nimport ShinyCard from \"@/components/nurui/shiny-card\";\n\nexport default function ShinyCardDemo() {\n  return (\n    <div className=\"p-10\">\n      {data.map((feature, index) => (\n        <ShinyCard\n          key={index}\n          featureName={feature.featureName}\n          featureItems={feature.featureItems}\n          icon={feature.icon}\n        />\n      ))}\n    </div>\n  );\n}\n\nconst data = [\n  {\n    featureName: \"Fast Performance\",\n    featureItems: [\n      \"Optimized for speed\",\n      \"Low latency\",\n      \"Lightweight and efficient\",\n    ],\n    icon: <FaRocket />,\n  },\n];\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "./src/components/nurui/shiny-card.tsx",
+      "content": "import { ReactNode } from \"react\";\nimport { MdDone } from \"react-icons/md\";\nimport \"./styles/shiny-card.css\";\n\ninterface ShinyCardProps {\n  featureName: string;\n  featureItems: string[];\n  icon: ReactNode | string;\n}\n\nconst ShinyCard: React.FC<ShinyCardProps> = ({\n  featureName,\n  featureItems,\n  icon,\n}) => {\n  return (\n    <div className=\"shiny-card space-y-3 min-h-72 shadow-2xl dark:shadow-none\">\n      <p className=\"text-5xl text-[var(--primary-color)] mb-5 mt-1\">{icon}</p>\n      <h2 className=\"text-xl font-bold\">{featureName}</h2>\n      <ul className=\"space-y-2\">\n        {featureItems.map((item, index) => (\n          <li\n            key={index}\n            className=\"text-pretty font-semibold flex items-center gap-2.5\"\n          >\n            <span className=\"size-4 flex items-center justify-center p-0.5 bg-[var(--primary-color)] text-[var(--black-color)] rounded-full\">\n              <MdDone />\n            </span>\n            <span>{item} </span>\n          </li>\n        ))}\n      </ul>\n    </div>\n  );\n};\n\nexport default ShinyCard;\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "./src/components/nurui/styles/shiny-card.css",
+      "content": ".shiny-card {\n  --white: hsl(0, 0%, 100%);\n  --black: hsl(240, 15%, 9%);\n  --paragraph: hsl(0, 0%, 83%);\n  --line: hsl(240, 9%, 17%);\n  --primary: var(--primary-color);\n  gap: 1rem;\n  padding: 1rem;\n  background-color: hsla(240, 15%, 9%, 1);\n  background-image:\n    radial-gradient(at 88% 40%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),\n    radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),\n    radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),\n    radial-gradient(at 0% 64%, hsl(189, 99%, 26%) 0px, transparent 85%),\n    radial-gradient(at 41% 94%, hsl(189, 97%, 36%) 0px, transparent 85%),\n    radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);\n\n  border-radius: 1rem;\n  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;\n\n  border: 2px solid var(--primary);\n  animation: border-color-change 3s linear infinite;\n}\n\n@keyframes border-color-change {\n  0% {\n    border-color: var(--primary);\n  }\n\n  50% {\n    border-color: var(--line);\n  }\n\n  100% {\n    border-color: var(--primary);\n  }\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:component"
+}

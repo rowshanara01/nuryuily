@@ -1,0 +1,76 @@
+---
+title: "info-card"
+description: "A stylish info-card component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="infoCard" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Add the required CSS animations</Step>
+
+Add the following animations to your `globals.css` or others file.
+
+<CodeBlock isLanguage={false} snippetKey="info-card-css" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/info-card.tsx`
+
+<CodeBlock componentName="infoCard" fileName="info-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop             | Type     | Default                      | Description                                                             |
+| ---------------- | -------- | ---------------------------- | ----------------------------------------------------------------------- |
+| `title`          | `string` | `Required`                   | Main title text displayed on the card.                                  |
+| `description`    | `string` | `Required`                   | Description text shown below the title.                                 |
+| `width`          | `number` | `388`                        | Width of the entire card (in pixels).                                   |
+| `height`         | `number` | `378`                        | Height of the entire card (in pixels).                                  |
+| `borderColor`    | `string` | `"#80eeb4"`                  | Color used in the animated rotating border.                             |
+| `borderBgColor`  | `string` | `"#242424"`                  | Secondary color used in the border gradient background.                 |
+| `borderWidth`    | `number` | `3`                          | Width of the outer animated border (in pixels).                         |
+| `borderPadding`  | `number` | `14`                         | Padding inside the border, around the content container (in pixels).    |
+| `cardBgColor`    | `string` | `"#000"`                     | Background color of the card itself.                                    |
+| `shadowColor`    | `string` | `-`                          | **Unused** in current code; reserved for potential custom shadow color. |
+| `patternColor1`  | `string` | `-`                          | **Unused** in current code; reserved for decorative background pattern. |
+| `patternColor2`  | `string` | `-`                          | **Unused** in current code; reserved for decorative background pattern. |
+| `textColor`      | `string` | `"#f5f5f5"`                  | Default color of the text.                                              |
+| `hoverTextColor` | `string` | `"#242424"`                  | Title color on hover with animated background effect.                   |
+| `fontFamily`     | `string` | `"'Roboto Mono', monospace"` | Font used when content is in LTR languages.                             |
+| `rtlFontFamily`  | `string` | `"'Montserrat', sans-serif"` | Font used when content is in RTL languages.                             |
+| `effectBgColor`  | `string` | `"#80eeb4"`                  | Background color of the hover effect behind the title text.             |
+| `contentPadding` | `string` | `"10px 16px"`                | Padding inside the content area of the card.                            |

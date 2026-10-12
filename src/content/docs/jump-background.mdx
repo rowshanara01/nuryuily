@@ -1,0 +1,52 @@
+---
+title: "jump background"
+description: "A stylish jump background component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="jumpBackground" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/jump-background.tsx`
+
+<CodeBlock componentName="jumpBackground" fileName="jump-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop        | Type              | Default     | Description                                                                |
+| ----------- | ----------------- | ----------- | -------------------------------------------------------------------------- |
+| `children`  | `React.ReactNode` | –           | The content to display on top of the animated background.                  |
+| `className` | `string`          | –           | Additional CSS classes for the outer container.                            |
+| `speed`     | `number`          | `1`         | Controls how fast the warp lines animate. Lower values = faster animation. |
+| `color`     | `string`          | `"#3ca2fa"` | The color of the animated warp lines (default: blue).                      |
+| `height`    | `number`          | `1`         | The thickness (height) of each warp line in pixels.                        |
+| `line`      | `number`          | `50`        | Number of warp lines to render radially.                                   |

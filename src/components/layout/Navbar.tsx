@@ -1,0 +1,111 @@
+"use client";
+import LinkWithProgress from "@/components/common/LinkWithProgress";
+import Nurui from "@/components/common/Nurui";
+import RoundedButton from "@/components/common/RoundedButton";
+import VaulDrawer from "@/components/ui/drawer/VaulDrawer";
+import { navigationActive } from "@/utils/navigationActive";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import ThemeSwitcher from "../common/ThemeSwitcher";
+import ComponentSearchbar from "./components-layout/ComponentSearchbar";
+
+const Navbar = () => {
+  const [stars, setStars] = useState(0);
+
+  useEffect(() => {
+    async function fetchStars() {
+      const response = await fetch(
+        "https://api.github.com/repos/afsar-dev/Nurui",
+      );
+      const data = await response.json();
+      setStars(data.stargazers_count);
+    }
+
+    fetchStars();
+  }, []);
+
+  const pathName = usePathname();
+  if (pathName.includes("docs") || pathName.includes("preview")) return null;
+
+  return (
+    <div className="sticky top-0 z-50 bg-[var(--background-color)] lg:bg-transparent lg:backdrop-blur-lg lg:overflow-hidden w-full border-dashed border-b border-[var(--black-color)] dark:border-white/20 ">
+      <nav className="container flex flex-wrap items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center gap-6">
+          <div className="flex items-center justify-center lg:gap-1">
+            <VaulDrawer />
+            <Nurui textSize="text-2xl lg:text-3xl" />
+            <p className=" bg-[var(--primary-color)] dark:bg-[var(--primary-color-2)] text-[var(--white-color)] dark:text-[var(--primary-color)] rounded-full font-semibold px-1.5 text-[0.65rem] hidden lg:block">
+              Basic
+            </p>
+          </div>
+
+          <div className="hidden xl:flex items-center font-semibold">
+            {navigation.map((nav) => (
+              <LinkWithProgress
+                className={
+                  navigationActive(nav.url, pathName)
+                    ? `navigation-active text-[#FCFCFC] bg-[var(--primary-color)] dark:bg-white/10`
+                    : `navigation-unactive`
+                }
+                key={nav.id}
+                href={nav.url}
+              >
+                {nav.name}
+              </LinkWithProgress>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 lg:gap-3.5">
+          <ComponentSearchbar />
+
+          <RoundedButton
+            href="https://www.linkedin.com/in/md-afsar-mahmud"
+            icon={
+              <FaLinkedinIn className="text-2xl text-[var(--white-color)] dark:text-[var(--primary-color)]" />
+            }
+          />
+          <RoundedButton
+            href="https://github.com/afsar-dev/Nurui"
+            icon={
+              <FaGithub className="text-2xl text-[var(--white-color)] dark:text-[var(--primary-color)] " />
+            }
+            iconInfo={stars || 0}
+          />
+          <ThemeSwitcher />
+        </div>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;
+
+const navigation = [
+  {
+    id: 1,
+    name: "docs",
+    url: "/docs/installation",
+  },
+  {
+    id: 2,
+    name: "component",
+    url: "/docs/components",
+  },
+  {
+    id: 3,
+    name: "Blocks",
+    url: "/blocks",
+  },
+  {
+    id: 4,
+    name: "playground",
+    url: "/playground",
+  },
+  {
+    id: 5,
+    name: "Showcase",
+    url: "/showcase",
+  },
+];

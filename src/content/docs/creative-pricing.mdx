@@ -1,0 +1,84 @@
+---
+title: "creative pricing"
+description: "A stylish creative pricing component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="creativePricing" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/creative-pricing.tsx`
+
+<CodeBlock componentName="creativePricing" fileName="creative-pricing" />
+
+`components/nurui/button.tsx`
+
+<CodeBlock componentName="creativePricing" fileName="button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`CreativePricing`
+
+| Prop          | Type            | Default                                    | Description                                                                   |
+| ------------- | --------------- | ------------------------------------------ | ----------------------------------------------------------------------------- |
+| `tag`         | `string`        | `"Simple Pricing"`                         | Small decorative text shown above the main title.                             |
+| `title`       | `string`        | `"Make Short Videos That Pop"`             | Main heading text for the pricing section.                                    |
+| `description` | `string`        | `"Edit, enhance, and go viral in minutes"` | Subtext shown under the title.                                                |
+| `tiers`       | `PricingTier[]` | `Required`                                 | Array of pricing tiers to display. Each tier includes name, icon, price, etc. |
+
+`PricingTier`
+
+| Property      | Type              | Required | Description                                                       |
+| ------------- | ----------------- | -------- | ----------------------------------------------------------------- |
+| `name`        | `string`          | Yes      | Name of the pricing tier.                                         |
+| `icon`        | `React.ReactNode` | Yes      | Icon shown at the top of the card.                                |
+| `price`       | `number`          | Yes      | Monthly price for the tier.                                       |
+| `description` | `string`          | Yes      | Short description of the pricing tier.                            |
+| `features`    | `string[]`        | Yes      | List of features included in the pricing tier.                    |
+| `popular`     | `boolean`         | No       | Marks the tier as popular; adds a badge and special button style. |
+| `color`       | `string`          | Yes      | Tailwind color prefix (e.g., `"blue"`, `"amber"`, `"green"`).     |
+
+`Button`
+
+| Prop        | Type                                                                          | Default     | Description                                                                  |
+| ----------- | ----------------------------------------------------------------------------- | ----------- | ---------------------------------------------------------------------------- |
+| `variant`   | `"default" \| "destructive" \| "outline" \| "secondary" \| "ghost" \| "link"` | `"default"` | Visual style of the button.                                                  |
+| `size`      | `"default" \| "sm" \| "lg" \| "icon"`                                         | `"default"` | Controls button height, padding, and border radius.                          |
+| `asChild`   | `boolean`                                                                     | `false`     | If `true`, renders using `<Slot />` for passing custom elements as children. |
+| `className` | `string`                                                                      | `-`         | Additional Tailwind classes to override or extend default styles.            |
+| `...props`  | `React.ButtonHTMLAttributes<HTMLButtonElement>`                               | `-`         | All standard HTML `<button>` attributes like `onClick`, `type`, `disabled`.  |

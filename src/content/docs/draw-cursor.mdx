@@ -1,0 +1,51 @@
+---
+title: "draw cursor"
+description: "A stylish following draw cursor component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="drawCursor" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/draw-cursor.tsx`
+
+<CodeBlock componentName="drawCursor" fileName="draw-cursor" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop Name      | Type                           | Default        | Description                                                               |
+| -------------- | ------------------------------ | -------------- | ------------------------------------------------------------------------- |
+| `children`     | `React.ReactNode`              | `undefined`    | Content to be rendered inside the drawing area.                           |
+| `strokeColor`  | `string`                       | `"#FF9900"`    | Color of the drawn lines.                                                 |
+| `strokeWidth`  | `number`                       | `10`           | Thickness of the stroke/line in pixels.                                   |
+| `type`         | `"drawOnHold" \| "drawAlways"` | `"drawAlways"` | Drawing mode: only on mouse hold (`drawOnHold`) or always (`drawAlways`). |
+| `followEffect` | `boolean`                      | `false`        | If `true`, each drawn stroke fades out smoothly (like a trailing effect). |

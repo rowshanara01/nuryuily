@@ -1,0 +1,56 @@
+---
+title: "splash cursor"
+description: "A stylish following splash cursor component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="splashCursor" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/splash-cursor.tsx`
+
+<CodeBlock componentName="splashCursor" fileName="splash-cursor" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop                   | Type                                  | Default                  | Description                                                                              |
+| ---------------------- | ------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------- |
+| `SIM_RESOLUTION`       | `number`                              | `128`                    | Simulation resolution. Controls fluid simulation grid resolution (higher = more detail). |
+| `DYE_RESOLUTION`       | `number`                              | `1440`                   | Resolution of the dye/visual layer (typically matches canvas size for best clarity).     |
+| `CAPTURE_RESOLUTION`   | `number`                              | `512`                    | Resolution used for capturing frames (e.g., for screenshots or recording).               |
+| `DENSITY_DISSIPATION`  | `number`                              | `3.5`                    | Controls how quickly dye density fades over time. Higher = faster fade.                  |
+| `VELOCITY_DISSIPATION` | `number`                              | `2`                      | How quickly fluid velocity dissipates. Higher = faster slowing down.                     |
+| `PRESSURE`             | `number`                              | `0.1`                    | Fluid pressure value for solving the Navier-Stokes equation in simulation.               |
+| `PRESSURE_ITERATIONS`  | `number`                              | `20`                     | Number of solver iterations for pressure. More = smoother and more accurate fluid.       |
+| `CURL`                 | `number`                              | `3`                      | Vorticity (swirl) strength. Higher = more swirling effects in fluid.                     |
+| `SPLAT_RADIUS`         | `number`                              | `0.2`                    | Radius of the fluid “splat” or brush stroke when interacting.                            |
+| `SPLAT_FORCE`          | `number`                              | `6000`                   | Intensity of the fluid force applied when interacting.                                   |
+| `SHADING`              | `boolean`                             | `true`                   | Enables or disables shading effects for a more 3D-like look.                             |
+| `COLOR_UPDATE_SPEED`   | `number`                              | `10`                     | Speed at which colors change (for animated dye).                                         |
+| `BACK_COLOR`           | `{ r: number; g: number; b: number }` | `{ r: 0.5, g: 0, b: 0 }` | Background color of the canvas, in RGB.                                                  |
+| `TRANSPARENT`          | `boolean`                             | `true`                   | If true, makes the canvas background transparent.                                        |

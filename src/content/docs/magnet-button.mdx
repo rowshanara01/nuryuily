@@ -1,0 +1,57 @@
+---
+title: "magnet-button"
+description: "A stylish magnet button component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="magnetButton" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/magnet-button.tsx`
+
+<CodeBlock componentName="magnetButton" fileName="magnet-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop            | Type                                            | Default | Description                                                                   |
+| --------------- | ----------------------------------------------- | ------- | ----------------------------------------------------------------------------- |
+| `particleCount` | `number`                                        | `12`    | Number of particles that animate around the button.                           |
+| `attractRadius` | `number` _(optional, not implemented yet)_      | `-`     | Intended to control attraction radius. Currently not used in logic.           |
+| `className`     | `string`                                        | `-`     | Additional Tailwind or CSS classes for custom styling.                        |
+| `children`      | `React.ReactNode`                               | `-`     | Content passed inside the button (inherited from native props).               |
+| `...props`      | `React.ButtonHTMLAttributes<HTMLButtonElement>` | `-`     | All other native `<button>` props such as `onClick`, `type`, `disabled`, etc. |

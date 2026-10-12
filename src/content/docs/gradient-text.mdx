@@ -1,0 +1,47 @@
+---
+title: "gradient text"
+description: "A stylish gradient text component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="gradientText" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/gradient-text.tsx`
+
+<CodeBlock componentName="gradientText" fileName="gradient-text" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+| Prop               | Type        | Default                             | Description                                                        |
+| ------------------ | ----------- | ----------------------------------- | ------------------------------------------------------------------ |
+| **children**       | `ReactNode` | **Required**                        | The text or elements to display inside the gradient effect.        |
+| **className**      | `string`    | `""`                                | Additional Tailwind or custom CSS classes for styling the wrapper. |
+| **colors**         | `string[]`  | `["#ffaa40", "#9c40ff", "#ffaa40"]` | Array of color stops for the gradient animation.                   |
+| **animationSpeed** | `number`    | `8` (seconds)                       | Speed of the gradient animation. Lower values = faster animation.  |
+| **showBorder**     | `boolean`   | `false`                             | If `true`, shows an animated gradient border around the text.      |

@@ -1,0 +1,94 @@
+---
+title: "contact-form"
+description: "A stylish contact-form component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="contactForm" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/contact-form.tsx`
+
+<CodeBlock componentName="contactForm" fileName="contact-form" />
+
+`components/nurui/background-shine-button.tsx`
+
+<CodeBlock componentName="contactForm" fileName="background-shine-button" />
+
+`components/nurui/shiny-input.tsx`
+
+<CodeBlock componentName="contactForm" fileName="shiny-input" />
+
+`components/nurui/shiny-text-area.tsx`
+
+<CodeBlock componentName="contactForm" fileName="shiny-text-area" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`background-shine-button`
+
+| Prop        | Type     | Default | Description                                       |
+| ----------- | -------- | ------- | ------------------------------------------------- |
+| `title`     | `string` | `-`     | Text displayed inside the button.                 |
+| `className` | `string` | `-`     | Custom Tailwind class names for styling override. |
+
+`shiny-input`
+
+| Prop                   | Type        | Default                                 | Description                                        |
+| ---------------------- | ----------- | --------------------------------------- | -------------------------------------------------- |
+| `placeholder`          | `string`    | `-`                                     | Placeholder text shown inside the input.           |
+| `type`                 | `string`    | `-`                                     | Input type (e.g., `"text"`, `"email"`, `"tel"`).   |
+| `name`                 | `string`    | `-`                                     | Name attribute for form submission.                |
+| `required`             | `boolean`   | `false`                                 | Whether the input is required for form submission. |
+| `className`            | `string`    | `-`                                     | Custom Tailwind class names for the container div. |
+| `icon`                 | `ReactNode` | `-`                                     | Optional icon element displayed beside the input.  |
+| `borderHoverAnimation` | `string`    | `"1px solid var(--primary-color)"`      | CSS border style applied on hover.                 |
+| `focus`                | `string`    | `"focus:border-[var(--primary-color)]"` | Tailwind focus border utility class.               |
+
+`shiny-text-area`
+
+| Prop                   | Type        | Default                                 | Description                                          |
+| ---------------------- | ----------- | --------------------------------------- | ---------------------------------------------------- |
+| `placeholder`          | `string`    | `-`                                     | Placeholder text shown inside the textarea.          |
+| `name`                 | `string`    | `-`                                     | Name attribute for form submission.                  |
+| `rows`                 | `number`    | `4`                                     | Number of rows visible by default.                   |
+| `required`             | `boolean`   | `false`                                 | Whether the textarea is required.                    |
+| `className`            | `string`    | `-`                                     | Custom Tailwind class names for the container div.   |
+| `icon`                 | `ReactNode` | `-`                                     | Optional icon element displayed beside the textarea. |
+| `borderHoverAnimation` | `string`    | `"1px solid var(--primary-color)"`      | CSS border style applied on hover.                   |
+| `focus`                | `string`    | `"focus:border-[var(--primary-color)]"` | Tailwind focus border utility class.                 |

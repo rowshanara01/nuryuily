@@ -1,0 +1,97 @@
+---
+title: "research-hero"
+description: "A stylish research-hero component for modern UIs, built with accessibility and animation in mind."
+---
+
+<ComponentPreview componentName="researchHero" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+  <Cli />
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+<Cli isManual />
+
+<Step>Add util file</Step>
+
+`lib/utils.ts`
+
+<CodeBlock snippetKey="utils-ts" />
+
+`utils/use-mouse-position`
+
+<CodeBlock snippetKey="use-mouse-position-ts" />
+
+<Step>Copy and paste the following code into your project.</Step>
+
+`components/nurui/sparkles.tsx`
+
+<CodeBlock componentName="researchHero" fileName="sparkles" />
+
+`components/nurui/research-hero.tsx`
+
+<CodeBlock componentName="researchHero" fileName="research-hero" />
+
+`components/nurui/floating-paper.tsx`
+
+<CodeBlock componentName="researchHero" fileName="floating-paper" />
+
+`components/nurui/robo-animation.tsx`
+
+<CodeBlock componentName="researchHero" fileName="robo-animation" />
+
+`components/nurui/button.tsx`
+
+<CodeBlock componentName="researchHero" fileName="button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+   
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+### Props
+
+`SparklesCore`
+
+| Prop              | Type     | Default           | Description                       |
+| ----------------- | -------- | ----------------- | --------------------------------- |
+| `id`              | `string` | `"tsparticles"`   | Canvas element ID                 |
+| `background`      | `string` | `"transparent"`   | Canvas background color           |
+| `minSize`         | `number` | `0.6`             | Minimum size of a particle        |
+| `maxSize`         | `number` | `1.4`             | Maximum size of a particle        |
+| `particleDensity` | `number` | `100`             | Number of particles on the canvas |
+| `className`       | `string` | `"h-full w-full"` | Additional classes for the canvas |
+| `particleColor`   | `string` | `"#FFFFFF"`       | Color of the particles            |
+
+`FloatingPaper`
+
+| Prop    | Type     | Default | Description                               |
+| ------- | -------- | ------- | ----------------------------------------- |
+| `count` | `number` | `5`     | Number of floating paper icons to animate |
+
+`Button`
+
+| Prop        | Type                                              | Default     | Description                                   |
+| ----------- | ------------------------------------------------- | ----------- | --------------------------------------------- |
+| `variant`   | `"default"` \| `"destructive"` \| `"outline"` ... | `"default"` | Predefined visual style                       |
+| `size`      | `"default"` \| `"sm"` \| `"lg"` \| `"icon"`       | `"default"` | Predefined button sizes                       |
+| `asChild`   | `boolean`                                         | `false`     | Renders as child element (for `<Link>`, etc.) |
+| `className` | `string`                                          | `undefined` | Custom Tailwind classes                       |
+| `...props`  | `React.ButtonHTMLAttributes<HTMLButtonElement>`   | `–`         | All native button props supported             |
