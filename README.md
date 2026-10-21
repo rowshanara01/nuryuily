@@ -4,7 +4,7 @@ A fast, type-safe content website built with TypeScript and MDX, where pages and
 
 Show Image Show Image Show Image
 
-🔗 Live Site: your-site-link.com
+
 
 📌 About
 
